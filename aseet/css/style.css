@@ -233,6 +233,10 @@ SP
   /*-------------------------------------------
   Contact
   -------------------------------------------*/
+  #contact {
+    margin-top: 20px;
+  }
+
   #contact dl {
     flex-direction: column;
   }
@@ -242,4 +246,37 @@ SP
   #contact dd {
     width: 100%;
   }
+}
+
+/*-------------------------------------------
+  Accordion
+  -------------------------------------------*/
+.accordion {
+  margin-top: 20px;
+  border-bottom: solid 1px #c8c8c8;
+}
+
+.question {
+  padding: 10px;
+  background-color: white;
+  color: black;
+  position: relative;
+}
+
+.question::before {
+  position: absolute;
+  font-family: 'Font Awesome 5 Free';
+  content: '\f13a';
+  font-weight: 900;
+  right: 20px;
+  transition: 0.3s;
+}
+
+.question.open::before {
+  transform: rotate(180deg);
+}
+
+.answer {
+  padding: 10px;
+  display: none;
 }
